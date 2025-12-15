@@ -1,0 +1,76 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 16px 20px 8px;
+    color: #2d3436;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card p {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0984e3;
+    margin: 0 20px 16px;
+}
+
+.card a {
+    text-decoration: none;
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 0 0 16px 16px;
+    /* Rounded only at bottom */
+    width: 100%;
+    font-weight: 500;
+    margin-top: auto;
+    /* Pushes button to bottom */
+    transition: filter 0.2s;
+}
+
+.card a:hover {
+    filter: brightness(1.1);
+}
